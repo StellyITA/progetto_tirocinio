@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private Rigidbody rb;
     private float moveSpeed = 5f;
     private float jumpHeight = 1.5f;
     private float gravity = -9.81f;
