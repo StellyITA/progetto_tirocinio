@@ -5,6 +5,7 @@ public class PauseManager : MonoBehaviour
 {
     [Header("Canvas da mostrare/attivare")]
     [SerializeField] private GameObject pauseScreen;
+    [SerializeField] private GameObject settingsScreen;
 
     private bool isPaused = false;
 
@@ -35,5 +36,17 @@ public class PauseManager : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    public void Settings()
+    {
+        pauseScreen.SetActive(false);
+        settingsScreen.SetActive(true);
+    }
+
+    public void BackToMenu()
+    {
+        settingsScreen.SetActive(false);
+        pauseScreen.SetActive(true);
     }
 }
